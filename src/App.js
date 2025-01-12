@@ -1,9 +1,11 @@
 import './App.css';
-import Home from './containers/HomeContainer';
+import HomeContainer from './containers/HomeContainer';
+import HeaderContainer from './containers/HeaderContainer';
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <HeaderContainer/>
+      <HomeContainer/>
     </div>
   );
 }

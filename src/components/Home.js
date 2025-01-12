@@ -1,12 +1,10 @@
 import React from "react";
 import smartphone from './smartphone.jpg';
-import AddCart from './AddCart-Icon.png';
-function Home(){
+// import AddCart from './AddCart-Icon.png';
+function Home(props){
+    console.warn("home",props)
     return(
         <div>
-            <div className="add-to-cart" >
-                <img src={AddCart} alt="img" />
-            </div>
             <h1>Home Component</h1>
             <div className="cart-wrapper" >
                 <div className="img-wrapper item" >
@@ -21,7 +19,11 @@ function Home(){
                     </span>
                 </div>
                 <div className="btn-wrapper item" >
-                    <button>Add To Cart</button>
+                    <button 
+                    onClick={()=>
+                        {props.addToCartHandler({price:100000,name:'Realme P1 5G'})}
+                    }
+                     >Add To Cart</button>
                 </div>
             </div>
         </div>
